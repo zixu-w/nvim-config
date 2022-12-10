@@ -19,8 +19,8 @@ if test -d ${nvim_config_path}; then
   echo "Existing configuration backed up to '${backup_path}'"
 fi
 
-echo "Copying configuration..."
-ditto nvim ${nvim_config_path}
+echo "Creating link to configuration..."
+ln -sf $(pwd)/nvim ${nvim_config_path}
 
 echo "Initializing Packer plugins..."
 nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
