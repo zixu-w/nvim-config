@@ -27,3 +27,19 @@ configuration files at `~/.config/nvim`. Existing directory will be backed up.
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)-managed LSP servers
 - Auto-completion powered by [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - Extra clangd LSP support from [clangd_extensions.nvim](https://github.com/p00f/clangd_extensions.nvim)
+
+##
+###### Searching filenames with `;` and contents with `<C-g>`
+![fzf](https://user-images.githubusercontent.com/9819235/206936522-cb360e7a-69f2-4ada-8336-52ee6600d4eb.gif)
+---
+###### Navigating files with [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+![nvim-tree](https://user-images.githubusercontent.com/9819235/206936531-5aca7ca6-a36e-4780-955b-23932fe63549.gif)
+---
+###### Inline and popup diagnostics. Code actions (`<Leader>ca`) apply fixes
+![diag](https://user-images.githubusercontent.com/9819235/206936537-42763ef8-d9de-46e7-a821-289b97f933a6.gif)
+---
+###### Hover info and symbol lookups with LSP
+![lsp](https://user-images.githubusercontent.com/9819235/206936566-e1c74ab8-f936-4e68-a251-2242a87e9476.gif)
+---
+###### LSP code completion with documentation window
+![cmp](https://user-images.githubusercontent.com/9819235/206936574-57d72aa0-017c-4447-85f8-e93e37cdfd71.gif)
