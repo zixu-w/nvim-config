@@ -1,5 +1,24 @@
 -- NeoVIM settings
 
+------------
+-- Common --
+------------
+
+-- Better looking foldtext.
+function _G.BetterFoldText()
+  -- Keep indentation in front of the start line.
+  local startline = vim.fn.getline(vim.v.foldstart):gsub('\t', ' ')
+  -- Remove leading whitespaces in front of the end line.
+  local endline = vim.fn.getline(vim.v.foldend):gsub('^%s*', '')
+  local lines = vim.v.foldend - vim.v.foldstart + 1
+  return startline .. ' ... ' .. endline .. '  (' .. lines .. ' lines)'
+end
+
+vim.opt.foldtext = 'v:lua.BetterFoldText()'
+-- Clear fold fillchars.
+vim.opt.fillchars:append({ fold = ' ' })
+
+
 --------------
 -- Terminal --
 --------------
