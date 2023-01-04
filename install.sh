@@ -26,7 +26,7 @@ if [[ "${current_link}" == "$(pwd)/nvim" ]]; then
   echo "'${nvim_config_path}' is already correctly linked, skip linking."
 else
   # Backup existing files.
-  if test -d "${nvim_config_path}"; then
+  if test -e "${nvim_config_path}"; then
     echo "'${nvim_config_path}' already exists, backing up..."
     timestamp="$(date +"%Y-%m-%d-%H-%M-%S")"
     backup_path="${nvim_config_path}_${timestamp}"
