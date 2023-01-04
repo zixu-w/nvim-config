@@ -18,7 +18,9 @@ fi
 echo "Installing..."
 brew bundle
 
-nvim_config_path="${HOME}/.config/nvim"
+# Neovim uses `$XDG_CONFIG_HOME/nvim` as its configuration directory.
+# `$XDG_CONFIG_HOME` defaults to `$HOME/.config` if not set.
+nvim_config_path="${XDG_CONFIG_HOME:-${HOME}/.config}/nvim"
 current_link="$(readlink -- "${nvim_config_path}" || true)"
 
 # If ~/.config/nvim is already a symlink targeting us, we can skip it.
