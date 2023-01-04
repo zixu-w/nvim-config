@@ -7,6 +7,13 @@ if ! command -v brew &> /dev/null; then
   exit 1
 fi
 
+# Ensure we're in the correct working directory that contains this script.
+working_dir=$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")
+if [[ ${working_dir} != $(pwd) ]]; then
+  pushd -- "${working_dir}"
+  trap popd EXIT
+fi
+
 # Install from Brewfile.
 echo "Installing..."
 brew bundle

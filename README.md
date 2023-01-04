@@ -6,7 +6,7 @@
 ## Install
 
 Clone this repository anywhere you like, for example `~/.nvim-config`, and
-run the `install.sh` script inside the repo.
+run the `install.sh` script.
 ```
 git clone https://github.com/zixu-w/nvim-config.git ~/.nvim-config
 cd ~/.nvim-config
