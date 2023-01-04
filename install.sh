@@ -19,7 +19,7 @@ echo "Installing..."
 brew bundle
 
 nvim_config_path=${HOME}/.config/nvim
-current_link=$(readlink ${nvim_config_path})
+current_link=$(readlink ${nvim_config_path} || true) # Ignore readlink failure.
 
 # If ~/.config/nvim is already a symlink targeting us, we can skip it.
 if [[ ${current_link} == $(pwd)/nvim ]]; then
