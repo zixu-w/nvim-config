@@ -23,7 +23,7 @@ brew bundle
 nvim_config_path="${XDG_CONFIG_HOME:-${HOME}/.config}/nvim"
 current_link="$(readlink -- "${nvim_config_path}" || true)"
 
-# If ~/.config/nvim is already a symlink targeting us, we can skip it.
+# If `$nvim_config_path` is already a symlink targeting us, we can skip it.
 if [[ "${current_link}" == "$(pwd)/nvim" ]]; then
   echo "'${nvim_config_path}' is already correctly linked, skip linking."
 else
@@ -36,7 +36,7 @@ else
     echo "Existing configuration backed up to '${backup_path}'"
   fi
 
-  # Create a symlink at ~/.config/nvim that points to config files here.
+  # Create a symlink at `$nvim_config_path` that points to config files here.
   echo "Creating link to configuration..."
   ln -sf -- "$(pwd)/nvim" "${nvim_config_path}"
 fi
