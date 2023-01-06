@@ -10,7 +10,7 @@ require('clangd_extensions').setup({
       '--background-index',
       '--clang-tidy',
     },
-    filetypes = { 'c', 'cpp' },
+    filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
   }),
   extensions = {
     -- defaults:

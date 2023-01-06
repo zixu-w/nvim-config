@@ -64,7 +64,7 @@ return require('packer').startup({function(use)
   }
   use {
     'p00f/clangd_extensions.nvim',
-    ft = { 'c', 'cpp' },
+    ft = { 'c', 'cpp', 'objc', 'objcpp' },
     after = 'nvim-lspconfig',
     config = function() require('config.clangd_extensions') end,
   }
